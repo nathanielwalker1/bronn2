@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Snapshot Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LP Snapshot Finder</h1>
+        </header>
+        
+        <main>
+            <section class="filters">
+                <div class="filter-group">
+                    <label for="priceRange">Price Range (%)</label>
+                    <input type="number" id="priceRange" value="5" min="0.1" step="0.1">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="timePeriod">Time Period (days)</label>
+                    <input type="number" id="timePeriod" value="30" min="1" step="1">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="minVolume">Minimum Volume ($)</label>
+                    <input type="number" id="minVolume" value="10000000" min="0" step="1000">
+                </div>
+                
+                <button id="findPools" class="primary-button">
+                    <span class="spinner"></span>
+                    <span class="button-text">Find Pools</span>
+                </button>
+            </section>
+
+            <section class="results">
+                <div class="table-container">
+                    <table id="poolsTable">
+                        <thead>
+                            <tr>
+                                <th>Pair</th>
+                                <th>Price Range</th>
+                                <th>Volume</th>
+                                <th>Days</th>
+                                <th>APR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Results will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="noResults" class="hidden">
+                    No pools found. Try adjusting your filters.
+                </div>
+                <div id="loading" class="hidden">
+                    Loading...
+                </div>
+                <div id="error" class="hidden">
+                    Error loading data. Please try again later.
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

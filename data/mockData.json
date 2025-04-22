@@ -1,0 +1,32 @@
+[
+  {
+    "pair": "USDC/WETH",
+    "priceRange": "4.2",
+    "volume": 12800000,
+    "timePeriod": 30
+  },
+  {
+    "pair": "DAI/USDC",
+    "priceRange": "2.1",
+    "volume": 18600000,
+    "timePeriod": 30
+  },
+  {
+    "pair": "BAL/USDC",
+    "priceRange": "8.7",
+    "volume": 9200000,
+    "timePeriod": 30
+  },
+  {
+    "pair": "WBTC/USDC",
+    "priceRange": "5.4",
+    "volume": 15200000,
+    "timePeriod": 30
+  },
+  {
+    "pair": "LINK/USDC",
+    "priceRange": "6.3",
+    "volume": 7500000,
+    "timePeriod": 30
+  }
+]
